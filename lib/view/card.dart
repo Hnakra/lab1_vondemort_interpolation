@@ -28,7 +28,7 @@ class DotCard extends StatelessWidget{
                SizedBox(width: 20,),
                Text("y: ${dot.y.toStringAsFixed(1)}"),
                SizedBox(width: 20,),
-               dot.color == "green"? Container() : Text("(y calculated!)")
+               dot.color == "green"? Container() : Text("(y calc!)", style: TextStyle(fontSize: 14),)
              ],
            )
 
