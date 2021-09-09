@@ -1,22 +1,21 @@
 import 'package:vondemort_interpolation/data/models/dot.dart';
 
 class CalculateInterpolation{
-  static calculate(double t, List<Dot> list){
-    double z = 0;
-    double p1;
-    double p2;
+  static calculate(double x, List<Dot> list){
+    print(list);
+    print (x);
+    double sum = 0;
     int n = list.length;
-    for(int j = 0; j < n; j++){
-      p1 = 1;
-      p2 = 1;
-      for(int i = 0; i < n; i++){
-        if(i != j){
-          p1 = p1*(t-list[i].x);
-          p2 = p2*(list[j].x - list[i].x);
+    for(int i = 0; i < n; i++){
+      double p = 1;
+      for(int j = 0; j < n; j++) {
+        if( j != i) {
+          p *=(x-list[j].x)/(list[i].x-list[j].x);
         }
       }
-      z = z+ list[j].y*p1/p2;
+      sum += p * list[i].y;
     }
-    return z;
+
+    return sum;
   }
 }

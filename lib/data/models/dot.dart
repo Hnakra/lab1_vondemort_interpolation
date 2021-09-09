@@ -5,4 +5,9 @@ class Dot{
   final double y;
   final String color;
   Dot({required this.id, required this.x, required this.y, required this.color});
+  @override
+  String toString() {
+
+    return x.toString()+" "+y.toString();
+  }
 }

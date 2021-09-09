@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
             backgroundColor: Colors.red,
             onPressed: () {
               var rand = new Random();
-              double x = (rand.nextDouble() * 5);
+              double x = (rand.nextDouble() * 10);
               SaveData.controllerInput.add({
                 "add": Dot(
                     id: context.read<ListOfDots>().getCounter(),
@@ -97,8 +97,8 @@ class _MyHomePageState extends State<MyHomePage> {
               SaveData.controllerInput.add({
                 "add": Dot(
                     id: context.read<ListOfDots>().getCounter(),
-                    x: (rand.nextDouble() * 5),
-                    y: rand.nextDouble() * 100,
+                    x: (rand.nextDouble() * 10),
+                    y: rand.nextDouble() * 10,
                     color: "green"
                 )
               });
